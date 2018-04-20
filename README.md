@@ -104,15 +104,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Something Missing?](#something-missing)
 
 ## Updating to New Releases FIRST Commit
-<<<<<<< HEAD
-
-JASON MERGED Create React App is divided into two packages:
-
-=======
 ***JASON WAS HERE ***
 ***Modifying the same branch as real Jason***  Create React App is divided into two packages:
 ***JASONTEST IS MAKING ANOTHER CHANGES***
->>>>>>> 25d95e9b26895088bb4570ab3751551c541fe678
 * `create-react-app` is a global command-line utility that you use to create new projects.
 * `react-scripts` is a development dependency in the generated projects (including this one).
 
