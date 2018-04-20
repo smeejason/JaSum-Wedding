@@ -103,9 +103,9 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Alternatives to Ejecting](#alternatives-to-ejecting)
 - [Something Missing?](#something-missing)
 
-## Updating to New Releases
+## Updating to New Releases 
 
-Create React App is divided into two packages:
+JASON TEST Create React App is divided into two packages:
 
 * `create-react-app` is a global command-line utility that you use to create new projects.
 * `react-scripts` is a development dependency in the generated projects (including this one).
