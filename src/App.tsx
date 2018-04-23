@@ -1,20 +1,61 @@
 import * as React from 'react';
 import './App.css';
-
-import logo from './logo.svg';
+import Footer from './Footer';
+import Header from './Header';
+import Navigation from './Navigation';
 
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to JASON TOWN</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <React.Fragment>
+       <Navigation />
+        <Header />
+       
+        <div className="container-fluid bg-3 text-center">    
+          <h3>Some of my Work</h3><br />
+          <div className="row">
+            <div className="col-sm-3">
+              <p>Some text..</p>
+              <img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive" alt="Image" />
+            </div>
+            <div className="col-sm-3"> 
+              <p>Some text..</p>
+              <img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive"  alt="Image" />
+            </div>
+            <div className="col-sm-3"> 
+              <p>Some text..</p>
+              <img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive"  alt="Image" />
+            </div>
+            <div className="col-sm-3">
+              <p>Some text..</p>
+              <img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive"  alt="Image" />
+            </div>
+          </div>
+        </div><br />
+
+        <div className="container-fluid bg-3 text-center">    
+          <div className="row">
+            <div className="col-sm-3">
+              <p>Some text..</p>
+              <img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive"  alt="Image" />
+            </div>
+            <div className="col-sm-3"> 
+              <p>Some text..</p>
+              <img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive"  alt="Image" />
+            </div>
+            <div className="col-sm-3"> 
+              <p>Some text..</p>
+              <img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive"  alt="Image" />
+            </div>
+            <div className="col-sm-3">
+              <p>Some text..</p>
+              <img src="https://placehold.it/150x80?text=IMAGE" className="img-responsive"  alt="Image" />
+            </div>
+          </div>
+        </div><br /><br />
+        <Footer />
+
+      </React.Fragment>
     );
   }
 }
