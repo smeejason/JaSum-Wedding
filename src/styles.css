@@ -1,3 +1,10 @@
 .shared {
     margin:0;
 }
+.jumbotron {
+    background-image: url('./images/banner.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: #b2533e;
+    color: #fff;
+}
