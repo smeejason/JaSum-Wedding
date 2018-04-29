@@ -6,5 +6,20 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-color: #b2533e;
-    color: #fff;
+    color: #000;
+    min-height: 280px;
+    position: relative;
 }
+
+.profile-image {
+    border: 1px solid #b2b2b2;
+    background-color: #fff;
+    padding:5px;
+    display: block;
+    width: 200px;
+    margin: 0 0 0 30px;
+    margin-top: -180px;
+    border-radius: 3px;
+    display: none;
+}
+

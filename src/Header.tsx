@@ -2,14 +2,18 @@ import * as React from 'react';
 import './styles.css'
 
 export default class Header extends React.Component {
-  public render() {
-    return (
-        <div className="jumbotron">
-            <div className="container text-center">
-                <h1>Jason and Summers Wedding with  little Control!</h1>      
-                <p>Some text that represents "Me"...</p>
-            </div>
-        </div>
-    );
-  }
+    public profileImg = require("./images/Profile.jpg");
+
+    public render() {
+        return (
+            <React.Fragment>
+                <div className="jumbotron">
+                    <div className="container text-left" />
+                </div>
+                <div className="profile-image">
+                    <img src={this.profileImg} className="img-responsive" />
+                </div>
+            </React.Fragment>
+        );
+    }
 }

@@ -12,17 +12,16 @@ export default class Navigation extends React.Component {
               <span className="icon-bar" />
               <span className="icon-bar" />                        
             </button>
-            <a className="navbar-brand" href="#">Wedding!</a>
+            <a className="navbar-brand" href="#">Jason and Summers Wedding!</a>
           </div>
           <div className="collapse navbar-collapse" id="myNavbar">
             <ul className="nav navbar-nav">
               <li className="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
               <li><a href="#">Gallery</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#">Location</a></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="#"><span className="glyphicon glyphicon-log-in" /> Login</a></li>
+              <li><a href="#"><span className="glyphicon glyphicon-log-in" /> RSVP</a></li>
             </ul>
           </div>
         </div>
