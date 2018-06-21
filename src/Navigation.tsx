@@ -1,27 +1,29 @@
 import * as React from 'react';
-import './styles.css'
+import { Link } from 'react-router';
+import './styles.css';
+
 
 export default class Navigation extends React.Component {
   public render() {
     return (
       <nav className="navbar navbar-inverse">
-        <div className="container-fluid">
+        <div className="container">
           <div className="navbar-header">
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span className="icon-bar" />
               <span className="icon-bar" />
               <span className="icon-bar" />                        
             </button>
-            <a className="navbar-brand" href="#">Jason and Summers Wedding!</a>
+            <Link className="navbar-brand" to="/">Jasum Wedding!!!</Link>
           </div>
           <div className="collapse navbar-collapse" id="myNavbar">
             <ul className="nav navbar-nav">
-              <li className="active"><a href="#">Home</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Location</a></li>
+              <li><Link to="/home" activeClassName="active">Home</Link></li>
+              <li><Link to="/gallery" activeClassName="active" >Gallery</Link></li>
+              <li><Link to="/location" activeClassName="active">Location</Link></li>
             </ul>
             <ul className="nav navbar-nav navbar-right">
-              <li><a href="#"><span className="glyphicon glyphicon-log-in" /> RSVP</a></li>
+              <li><Link className="glyphicon glyphicon-log-in" activeClassName="active" to="/rsvp"> RSVP</Link></li>
             </ul>
           </div>
         </div>

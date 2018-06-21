@@ -1,3 +1,7 @@
+body {
+    color: #222
+}
+
 .shared {
     margin:0;
 }
@@ -6,9 +10,58 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-color: #b2533e;
-    color: #000;
     min-height: 280px;
     position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-heightfade {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease-in-out;
+    -moz-transition: height .25s ease-in-out;
+    -webkit-transition: height .25s ease-in-out;
+    transition:max-height 0.3s ease-in-out; 
+}
+
+.form-fadein {
+    height: auto;
+    max-height: 100px;
+}
+
+.bg-title {
+    background-image: url('./images/heading-bg.png');
+    background-repeat: repeat;
+    padding: 0 40px 10px 10px;
+    margin-left: -10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.bg-footer {
+    border-top: 1px solid lightgray;
+    -webkit-box-shadow: 0px 0px 14px 1px rgba(100,100,100,1);
+    -moz-box-shadow: 0px 0px 14px 1px rgba(100,100,100,1);
+    box-shadow: 0px 0px 14px 1px rgba(100,100,100,1);
+}
+
+.bg-box {
+    background-image: url('./images/title-bg.png');
+    background-repeat: repeat;
+    padding: 0 10px 15px 10px;
+    margin-left: -10px;
+    margin-bottom: 15px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.wall-img {
+    background-image: url('./images/7526.jpg');
+    background-repeat: repeat;
+    background-size: 900px 600px;
 }
 
 .profile-image {
@@ -23,3 +76,69 @@
     display: none;
 }
 
+@media screen and (min-width: 768px) {
+    .jumbotron h1 {
+        font-size: 43px;
+    }
+    .jumbotron h2 {
+        font-size: 26px;
+    }
+    .bg-title {
+        float: left;
+    }
+
+    .landsccape-img {
+        padding-top: 70px;
+    }
+}
+
+.border-right {
+    border-right: 1px solid gray;
+}
+
+.navbar a.active {
+    background-color: #000 !important;
+}
+
+.hover-img {
+    position: absolute;
+}
+
+#gmap_canvas img {
+    max-width:none!important;
+    background:none!important
+}
+
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    /* The duration of the animation */
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible; 
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    } 
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
