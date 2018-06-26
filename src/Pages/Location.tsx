@@ -22,7 +22,7 @@ class Location extends React.Component {
             <br /><br />
             <div className="col-sm-12" >
               <a href="https://www.google.co.uk/maps/place/15+Bristol+Rd,+Whenuapai,+Auckland+0618,+New+Zealand/@-36.7784514,174.6050427,15.65z/data=!4m5!3m4!1s0x6d0d3e2872f52671:0xa74bdffc3c2d4722!8m2!3d-36.7789879!4d174.6075082" target="_blank">
-              <img src={ require("../images/google-map.PNG")} className="img-responsive image-content" alt="Image" />
+              <img src={ require("../images/gm.png")} className="img-responsive image-content" alt="Image" />
               </a>
             </div>
             <br />

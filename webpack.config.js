@@ -8,8 +8,10 @@ module.exports = {
           ],
     },
     output: {
-        filename: "bundle.js",
-        path: __dirname + "/dist"
+        filename: "[name].js",
+        path: __dirname + "/out",
+        library:'bundle',
+        libraryTarget:'var'
     },
 
     // Enable sourcemaps for debugging webpack's output.
@@ -24,14 +26,6 @@ module.exports = {
         rules: [
             // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
             { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
-            {
-                test: /\.(png|jpe?g|svg)$/,
-                loader: 'file-loader',
-                options: {
-                    name: 'assets/[name].[ext]',
-                }
-            },
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
             {
                 test: /\.css$/,
@@ -39,8 +33,15 @@ module.exports = {
                   { loader: "style-loader" },
                   { loader: "css-loader" }
                 ]
-              }
-        ],
+            },
+            {
+                loader: 'file-loader',
+                options: {
+                    name: 'assets/[name].[ext]',
+                },
+                test: /\.(png|jpe?g|svg)$/
+            }
+        ]
     },
 
     // When importing a module whose path matches one of the following, just
