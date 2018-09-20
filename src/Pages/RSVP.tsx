@@ -15,6 +15,7 @@ export interface IRSVPState {
     cantMakeIt: boolean;
     comments: string;
     formSubmitted: boolean;
+    formWaiting: boolean;
 }
 
 export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
@@ -27,6 +28,7 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
             email: '',
             firstName: '',
             formSubmitted: false,
+            formWaiting: false,
             lastName: '',
             plusOne: false,
             plusOneName: '',
@@ -52,7 +54,10 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
     }
 
     public onSubmit = (ctl: any)=> {
-        ctl.target.disabled = false;
+        // ctl.target.disabled = false;
+        this.setState({
+            formWaiting: true,
+        });
         axios.post('https://jasonsumwedding.azurewebsites.net/api/UserRegistration?code=5rrf8ISbSyHBqlTUADUvmoSLc0hFQsmZxnJtftaFkjZLGNhhgdxTZw==', 
         // axios.post('http://localhost:7071/api/UserRegistration',
             { 
@@ -85,7 +90,7 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
                 <p>We cant wait to see you all, but understand it may not be possible to make it. It would be helpful if you let us know below. If your situation does change, please let us know.</p>
             </div>
             {!this.state.formSubmitted &&
-            <div className="row bg-box" >
+            <div className="row bg-box rsvp-cont" >
                 <br /><br />
                 <form className="form-horizontal" action="{{route('user.api.profile')}}">
                     <div className="form-group">
@@ -138,6 +143,11 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
                         </div>
                     </div>
                 </form>
+                {this.state.formWaiting && 
+                    <div id='submit-spinner-container'>
+                        <div id='submit-spinner'>&nbsp;</div>
+                    </div>
+                }
             </div>
             }
             {this.state.formSubmitted &&

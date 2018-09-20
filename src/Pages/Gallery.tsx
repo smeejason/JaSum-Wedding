@@ -1,51 +1,101 @@
+
 import * as React from 'react';
 import '../App.css';
 import FramedPicture from '../FramedPicture';
+import Constants from  '../pictures'; 
 
-class Home extends React.Component {
+
+
+class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
+  public constructor(props:{}) {
+    super(props);
+    this.state = {
+      hasMore: true,  
+      items: Constants.pictureData.PictureGroup.slice(0, 2)
+    };
+
+    
+  }
+
+  public componentDidMount() {
+    // window.onscroll = this.handleScroll;
+}
+
+  public fetchMoreData = () => {
+   const allItems = this.state.items.concat(Constants.pictureData.PictureGroup.slice(this.state.items.length, this.state.items.length + 1));
+    this.setState({
+      items: allItems
+    });
+    if (allItems.length >= Constants.pictureData.PictureGroup.length) {
+      this.setState({ hasMore: false });
+      return;
+    }
+  };
+
+  public handleScroll = (event: any) => {
+    // const heightBound = window.outerHeight * 0.8
+    // if (heightBound > window.scrollY) {
+    //    this.fetchMoreData();
+        // tslint:disable-next-line
+    //    console.log('fetchihng data.');
+    // } 
+    // tslint:disable-next-line
+    // console.log("*****************");
+    // tslint:disable-next-line
+    // console.log("BCH:" + window.document.body.clientHeight);
+    // tslint:disable-next-line
+    // console.log("WIH:" + window.innerHeight);
+    // tslint:disable-next-line
+    // console.log("WSY:" + window.scrollY);
+
+    const scrolledItem = document.getElementById("bottomDiv") as HTMLElement;
+    const rect = scrolledItem.getBoundingClientRect();
+    const pos = rect.top + document.body.scrollTop;
+
+      const winTop = window.scrollY;
+      if (pos < winTop + 100) {
+        // tslint:disable-next-line
+        console.log("pos:" + pos);
+        // tslint:disable-next-line
+        console.log("winTop:" + winTop);
+      }
+  }
+  
+  
   public render() {
     return (
       <React.Fragment>
-        <div className="container bg-3 text-left">    
+        <div className="container bg-3 text-left gallery">    
         
           <div className="row bg-box">
             <h3><span className="glyphicon glyphicon-camera" /> Our cheesy photo gallery</h3>
-            <p className="col-sm-12">
-              Approxomitaly 2 years ago a still very loved up Jason and Summer decided to document their life and love. So we decidedBelow is a timeline of our memorable moments. 
+            <p>
+              Approxomitaly 2 years ago a still very loved up Jason and Summer decided to document their life and love. So we decided to take a selfie every week and below are some of our memorable moments. 
+            </p>
+            <p>  
+              The only rules we had was 2 photos maximum, no filters and its a selfie, not taken by someone else. Ultiamtely we dont care too much how we look as this is to docuemtn the memories. 
             </p>
           </div>
-          <div className="row">
-            <FramedPicture imageUrl={require("../images/Selfees/1.jpg")} />
-            <FramedPicture imageUrl={require("../images/Selfees/2.jpg")} />
-            <FramedPicture landscape={true} imageUrl={require("../images/Selfees/3.jpg")} />
-            <FramedPicture imageUrl={require("../images/Selfees/4.jpg")} />
-          </div><br />
-          <div className="row">
-            <FramedPicture landscape={true} imageUrl={require("../images/Selfees/5.jpg")} />
-            <FramedPicture imageUrl={require("../images/Selfees/6.jpg")} />
-            <FramedPicture landscape={true} imageUrl={require("../images/Selfees/7.jpg")} />
-            <FramedPicture landscape={false} imageUrl={require("../images/Selfees/8.jpg")} />
-          </div><br />
-          <div className="row">
-            <FramedPicture landscape={false} imageUrl={require("../images/Selfees/9.jpg")} />
-            <FramedPicture landscape={false} imageUrl={require("../images/Selfees/10.jpg")} />
-            <FramedPicture landscape={false} imageUrl={require("../images/Selfees/11.jpg")} />
-            <FramedPicture landscape={false} imageUrl={require("../images/Selfees/12.jpg")} />
-          </div><br />
-          <div className="row slideanim">
-            <FramedPicture landscape={true} imageUrl={require("../images/Selfees/13.jpg")} />
-            <FramedPicture landscape={true} imageUrl={require("../images/Selfees/14.jpg")} />
-            <FramedPicture landscape={false} imageUrl={require("../images/Selfees/15.jpg")} />
-            <FramedPicture landscape={false} imageUrl={require("../images/Selfees/16.jpg")} />
-          </div>
-          <div className="row slideanim">
-            <FramedPicture landscape={false} imageUrl={require("../images/Selfees/17.jpg")} />
-            <FramedPicture landscape={true} imageUrl={require("../images/Selfees/18.jpg")} />
-            <FramedPicture landscape={true} imageUrl={require("../images/Selfees/19.jpg")} />
-            <FramedPicture landscape={true} imageUrl={require("../images/Selfees/20.jpg")} />
-          </div>
+
+          {this.state.items.map((groupItem: any, groupIndex: number) => 
+            <React.Fragment key={groupIndex}>
+              <div  className={groupIndex < 100 ? "row slideanim slide" : "row slideanim"}>
+                {groupItem.Pictures.map((item: any, index: number) => 
+                  <React.Fragment key={item.Src} >
+                      <FramedPicture key={item.Src} imageUrl={item.Src} landscape={item.Landscape} />
+                  </React.Fragment>
+                )}
+              </div><br />
+            </React.Fragment>
+            )}
+            <br />
+            <br />
+            <p className='text-center'>
+              <button type="button" className={this.state.hasMore ? 'btn btn-primary' : 'btn btn-primary disabled'} onClick={this.fetchMoreData}>See More Dumb Pics ;)</button>
+            </p>
         </div><br />
         
+        <div id="bottomDiv">&nbsp;</div>
        <br /><br />
       </React.Fragment>
     );
