@@ -11,7 +11,7 @@ class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
     super(props);
     this.state = {
       hasMore: true,  
-      items: Constants.pictureData.PictureGroup.slice(0, 2)
+      items: Constants.pictureData.PictureGroup.slice(0, 3)
     };
 
     
@@ -22,7 +22,7 @@ class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
 }
 
   public fetchMoreData = () => {
-   const allItems = this.state.items.concat(Constants.pictureData.PictureGroup.slice(this.state.items.length, this.state.items.length + 1));
+   const allItems = this.state.items.concat(Constants.pictureData.PictureGroup.slice(this.state.items.length, this.state.items.length + 3));
     this.setState({
       items: allItems
     });
@@ -70,10 +70,10 @@ class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
           <div className="row bg-box">
             <h3><span className="glyphicon glyphicon-camera" /> Our cheesy photo gallery</h3>
             <p>
-              Approxomitaly 2 years ago a still very loved up Jason and Summer decided to document their life and love. So we decided to take a selfie every week and below are some of our memorable moments. 
+              Approximately 2 years ago a still very loved up Jason and Summer decided to document their life and love. So we decided to take a selfie every week and below are some of our memorable moments. 
             </p>
             <p>  
-              The only rules we had was 2 photos maximum, no filters and its a selfie, not taken by someone else. Ultiamtely we dont care too much how we look as this is to docuemtn the memories. 
+              The only rules we had was 2 photos maximum, no filters and it's a selfie, not taken by someone else. Ultimately we don't care too much how we look as this is to docuemnt the memories. 
             </p>
           </div>
 

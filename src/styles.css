@@ -90,10 +90,16 @@ body {
     .landsccape-img {
         padding-top: 70px;
     }
+
+    .border-right{
+        border-right: 1px solid gray !important;
+        height: 150px;
+    }
 }
 
 .border-right {
-    border-right: 1px solid gray;
+    border-right: 0px solid gray;
+    
 }
 
 .navbar a.active {
@@ -102,6 +108,7 @@ body {
 
 .hover-img {
     position: absolute;
+    padding-right:5px;
 }
 
 #gmap_canvas img {
@@ -184,3 +191,5 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  #googleMap { height: 500px !important;}

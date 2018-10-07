@@ -13,6 +13,7 @@ export interface IRSVPState {
     plusOne: boolean; 
     plusOneName: string; 
     cantMakeIt: boolean;
+    canISleepOver: boolean;
     comments: string;
     formSubmitted: boolean;
     formWaiting: boolean;
@@ -23,6 +24,7 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
     public constructor(props:IRSVPProps) {
         super(props);
         this.state = {
+            canISleepOver: false,
             cantMakeIt: false,
             comments: '',
             email: '',
@@ -47,6 +49,12 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
         });
     }
 
+    public canISleepOver = ()=> {
+        this.setState({
+            canISleepOver: !this.state.canISleepOver,
+        });
+    }
+
     public updateFieldState = (ctl: any)=> {
         const newState = {};
         newState[ctl.target.name] = ctl.target.value;
@@ -61,6 +69,7 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
         axios.post('https://jasonsumwedding.azurewebsites.net/api/UserRegistration?code=5rrf8ISbSyHBqlTUADUvmoSLc0hFQsmZxnJtftaFkjZLGNhhgdxTZw==', 
         // axios.post('http://localhost:7071/api/UserRegistration',
             { 
+                canisleepover: this.state.canISleepOver,
                 cantmakeit: this.state.cantMakeIt,
                 comments: this.state.comments,
                 email: this.state.email, 
@@ -86,7 +95,7 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
         <div className="container bg-3 text-left">    
             <div className="row bg-box">
                 <h3><span className="glyphicon glyphicon-log-in" /><u> RSVP</u></h3>
-                <p>Our wedding is going to be a small backyard wedding, where you are the lucky few that have been selected. Suits are not required, but come smart and make our photos look amazing!</p>
+                <p>Our wedding is going to be a small backyard wedding, where you are the lucky few that have been selected. Suits are not required, the theme is festival and fabulous, come looking good and make our photos look amazing!</p>
                 <p>We cant wait to see you all, but understand it may not be possible to make it. It would be helpful if you let us know below. If your situation does change, please let us know.</p>
             </div>
             {!this.state.formSubmitted &&
@@ -115,6 +124,13 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
                         <div className="col-sm-offset-2 col-sm-10">
                             <div className="checkbox">
                                 <label><input type="checkbox" name="cantMakeIt" onClick={this.cantMakeIt} /> Cant make it anymore...</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="form-group" style={{display: 'none'}}> 
+                        <div className="col-sm-offset-2 col-sm-10">
+                            <div className="checkbox">
+                                <label><input type="checkbox" onClick={this.canISleepOver} /> Can I sleep at the party venue?</label>
                             </div>
                         </div>
                     </div>
