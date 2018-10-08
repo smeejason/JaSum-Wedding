@@ -44,11 +44,11 @@ export default class FramedPicture extends React.Component<IFramedPictureProps, 
                     <div className="modal-content">
                         <div className="modal-header">
                             <button type="button" className="close" onClick={this.toggleModal} >&times;</button>
-                            <h4 className="modal-title">{this.props.title}</h4>
+                            <h3 className="modal-title">{this.props.title}</h3>
                         </div>
                         <div className="modal-body">
                             <img src={this.props.imageUrl} className="img-responsive image-content" alt="Image" />
-                            <p>{this.props.description}</p>
+                            <p className="modal-description text-center">{this.props.description}</p>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-default" onClick={this.toggleModal} >Close</button>

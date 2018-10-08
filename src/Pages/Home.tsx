@@ -19,9 +19,9 @@ class Home extends React.Component {
           </div>  
           <br />
         </div>
-        <div className="container bg-3 text-right">  
+        <div className="container bg-3 text-left">  
           <div className="row">
-            <FramedPicture imageUrl={require("../images/random/engage.jpg")} className="col-sm-12"/>
+            <FramedPicture title="Our engagement photo!" description="On this magical day Summer the amazing girl Brines said yes to a very loved up Jason Visser, I poped the question in Wales on a weekend camping trip." imageUrl={require("../images/random/engage.jpg")} className="col-sm-12"/>
           </div>
         </div>
         <br /><br />
@@ -39,9 +39,9 @@ class Home extends React.Component {
             <p>The theme is festival and fabulous, so this interpretation is open to you, just know this: The more ridiculous you feel at the beginning the more amazing you will feel as the night goes on, so bring out that crazy.</p> 
           </div>  
         </div>
-        <div className="container bg-3 text-right">  
+        <div className="container bg-3 text-left">  
           <div className="row">
-            <FramedPicture imageUrl={require("../images/random/fest1.jpg")} />
+            <FramedPicture title="My 40th birthday festival" description="The girl and I love a festival, this photo was one of the days on the extremely deboucherous Shindig Festival." imageUrl={require("../images/random/fest1.jpg")} />
             <FramedPicture imageUrl={require("../images/random/fest2.jpg")} landscape={false} />
             <FramedPicture imageUrl={require("../images/random/fest3.jpg")} />
             <FramedPicture imageUrl={require("../images/random/fest4.jpg")} />

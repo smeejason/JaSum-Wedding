@@ -207,10 +207,7 @@ body {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
-.cus-modal-content {
-    background-color: #fefefe;
-    margin: 5% auto; 
-    padding: 20px;
-    border: 1px solid #888;
+.modal-description{
+    padding-top: 15px;
+    font-size: 1.2em;
 }
