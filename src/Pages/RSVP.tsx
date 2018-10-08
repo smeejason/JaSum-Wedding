@@ -95,8 +95,8 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
         <div className="container bg-3 text-left">    
             <div className="row bg-box">
                 <h3><span className="glyphicon glyphicon-log-in" /><u> RSVP</u></h3>
-                <p>Our wedding is going to be a small backyard wedding, where you are the lucky few that have been selected. Suits are not required, the theme is festival and fabulous, come looking good and make our photos look amazing!</p>
-                <p>We cant wait to see you all, but understand it may not be possible to make it. It would be helpful if you let us know below. If your situation does change, please let us know.</p>
+                <p>Our "wedding" is going to be a bit of a backyard party as we will be marrying the day before with family. Suits are not required but the theme is festival and fabulous, whether that means a suit or a glitter leotard, that's your choice! </p>
+                <p>We cant wait to see you all, but understand it may not be possible to make it. Please let us know whether you can make it and/or if your situation does changes.</p>
             </div>
             {!this.state.formSubmitted &&
             <div className="row bg-box rsvp-cont" >
@@ -168,8 +168,8 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
             }
             {this.state.formSubmitted &&
                  <div className="row bg-box">
-                    <h3><u>Registration complete!</u></h3>
-                    <p>Thanks for registering, we will see you there!</p>
+                    <h3><u>RSVP complete!</u></h3>
+                    <p>Thanks for RSVP-ing!!</p>
                 </div>
             }
         </div>
