@@ -22,7 +22,7 @@ class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
 }
 
   public fetchMoreData = () => {
-   const allItems = this.state.items.concat(Constants.pictureData.PictureGroup.slice(this.state.items.length, this.state.items.length + 3));
+   const allItems = this.state.items.concat(Constants.pictureData.PictureGroup.slice(this.state.items.length, this.state.items.length + 4));
     this.setState({
       items: allItems
     });
@@ -82,7 +82,7 @@ class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
               <div  className={groupIndex < 100 ? "row slideanim slide" : "row slideanim"}>
                 {groupItem.Pictures.map((item: any, index: number) => 
                   <React.Fragment key={item.Src} >
-                      <FramedPicture key={item.Src} imageUrl={item.Src} landscape={item.Landscape} />
+                      <FramedPicture key={item.Src} imageUrl={item.Src} landscape={item.Landscape} title={item.Title} description={item.Description} />
                   </React.Fragment>
                 )}
               </div><br />
