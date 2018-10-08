@@ -9,7 +9,7 @@ export default class Footer extends React.Component {
             <div className="row">
               <div className="col-sm-4 border-right">
                 <h4><u>Where</u></h4>
-                <p>Muriwai, Auckland, New Zealand. We will update with full address shortly.</p>
+                <p>361 Muriwai Valley Road, Muriwai, Auckland, New Zealand</p>
               </div>
               <div className="col-sm-4 border-right">
                 <h4><u>When</u></h4>
