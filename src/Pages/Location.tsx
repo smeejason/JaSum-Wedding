@@ -12,13 +12,13 @@ class Location extends React.Component {
   public render() {
     return (
       <React.Fragment>
-        
-        <div className="container bg-3 text-left">    
+
+        <div className="container bg-3 text-left">
           <div className="row bg-box">
             <h3><span className="glyphicon glyphicon-map-marker" /><u> Location</u></h3>
-            <p>Muriwai, Auckland, New Zealand. We will update with full address shortly.</p>
+            <p>361 Muriwai Valley Road, Muriwai, Auckland, New Zealand.</p>
           </div>
-          <div className="row bg-box">  
+          <div className="row bg-box">
             <br /><br />
             <div className="col-sm-12" >
               <div id="googleMap">&nbsp;</div>

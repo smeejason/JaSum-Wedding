@@ -2,7 +2,7 @@
 import * as React from 'react';
 import '../App.css';
 import FramedPicture from '../FramedPicture';
-import Constants from  '../pictures'; 
+import Constants from  '../pictures';
 
 
 
@@ -10,11 +10,11 @@ class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
   public constructor(props:{}) {
     super(props);
     this.state = {
-      hasMore: true,  
+      hasMore: true,
       items: Constants.pictureData.PictureGroup.slice(0, 3)
     };
 
-    
+
   }
 
   public componentDidMount() {
@@ -38,7 +38,7 @@ class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
     //    this.fetchMoreData();
         // tslint:disable-next-line
     //    console.log('fetchihng data.');
-    // } 
+    // }
     // tslint:disable-next-line
     // console.log("*****************");
     // tslint:disable-next-line
@@ -60,27 +60,24 @@ class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
         console.log("winTop:" + winTop);
       }
   }
-  
-  
+
+
   public render() {
     return (
       <React.Fragment>
-        <div className="container bg-3 text-left gallery">    
-        
+        <div className="container bg-3 text-left gallery">
+
           <div className="row bg-box">
             <h3><span className="glyphicon glyphicon-camera" /> Our cheesy photo gallery</h3>
             <p>
-              Approximately 2 years ago a still very loved up Jason and Summer decided to document their life and love. So we decided to take a selfie every week and below are some of our memorable moments. 
-            </p>
-            <p>  
-              The only rules we had was 2 photos maximum, no filters and it's a selfie, not taken by someone else. Ultimately we don't care too much how we look as this is to docuemnt the memories. 
+              Approximately 2 years ago we decided to document our life and love with a weekly selfie. Ultimately we don't care too much how we look and below are a few of our memorable moments.
             </p>
           </div>
 
-          {this.state.items.map((groupItem: any, groupIndex: number) => 
+          {this.state.items.map((groupItem: any, groupIndex: number) =>
             <React.Fragment key={groupIndex}>
               <div  className={groupIndex < 100 ? "row slideanim slide" : "row slideanim"}>
-                {groupItem.Pictures.map((item: any, index: number) => 
+                {groupItem.Pictures.map((item: any, index: number) =>
                   <React.Fragment key={item.Src} >
                       <FramedPicture key={item.Src} imageUrl={item.Src} landscape={item.Landscape} title={item.Title} description={item.Description} />
                   </React.Fragment>
@@ -94,7 +91,7 @@ class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
               <button type="button" className={this.state.hasMore ? 'btn btn-primary' : 'btn btn-primary disabled'} onClick={this.fetchMoreData}>See More Dumb Pics ;)</button>
             </p>
         </div><br />
-        
+
         <div id="bottomDiv">&nbsp;</div>
        <br /><br />
       </React.Fragment>
