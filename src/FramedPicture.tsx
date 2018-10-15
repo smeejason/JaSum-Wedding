@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Map from './Map';
 import './styles.css'
 
 export interface IFramedPictureProps {
@@ -8,7 +9,10 @@ export interface IFramedPictureProps {
     frameStyle?: string;
     title?: string;
     description?: string;
+    mapLongitude?: number;
+    mapLatitude?: number;
 }
+
 
 export default class FramedPicture extends React.Component<IFramedPictureProps, { open:boolean; }> {
     public SF1 = require("./images/SF1.jpg");
@@ -21,8 +25,10 @@ export default class FramedPicture extends React.Component<IFramedPictureProps, 
    }
 
    public toggleModal= ()=>  {
+    const newState:boolean = !this.state.open
+    
     this.setState({
-        open: !this.state.open,
+        open: newState,
     });
    }
     
@@ -39,7 +45,7 @@ export default class FramedPicture extends React.Component<IFramedPictureProps, 
         </div>
 
         {this.state.open &&  
-            <div id="myModal" className="cus-modal" onClick={this.toggleModal}>
+            <div id="myModal" className="cus-modal">
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <div className="modal-header">
@@ -48,6 +54,7 @@ export default class FramedPicture extends React.Component<IFramedPictureProps, 
                         </div>
                         <div className="modal-body">
                             <img src={this.props.imageUrl} className="img-responsive image-content" alt="Image" />
+                            <Map longitude={this.props.mapLongitude} latitude={this.props.mapLatitude} enabled={true} zoom={10} className="modal-map" />
                             <p className="modal-description text-center">{this.props.description}</p>
                         </div>
                         <div className="modal-footer">

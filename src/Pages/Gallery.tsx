@@ -79,7 +79,7 @@ class Home extends React.Component <{}, { items: any, hasMore: boolean }> {
               <div  className={groupIndex < 100 ? "row slideanim slide" : "row slideanim"}>
                 {groupItem.Pictures.map((item: any, index: number) =>
                   <React.Fragment key={item.Src} >
-                      <FramedPicture key={item.Src} imageUrl={item.Src} landscape={item.Landscape} title={item.Title} description={item.Description} />
+                      <FramedPicture key={item.Src} imageUrl={item.Src} landscape={item.Landscape} title={item.Title} description={item.Description} mapLongitude={item.Longitude} mapLatitude={item.Latitude} />
                   </React.Fragment>
                 )}
               </div><br />

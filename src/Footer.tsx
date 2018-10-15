@@ -13,7 +13,7 @@ export default class Footer extends React.Component {
               </div>
               <div className="col-sm-4 border-right">
                 <h4><u>When</u></h4>
-                <p>2<sup>nd</sup> February 2019</p>
+                <p>2<sup>nd</sup> February 2019 from 12:00 till late</p>
               </div>
               <div className="col-sm-4">
                 <h4><u>Dress</u></h4>

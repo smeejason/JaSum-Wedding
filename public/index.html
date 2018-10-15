@@ -7,15 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIM5u-bFFoUt34-VGe4C6n7nNJFJcnTtg&callback=myMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIM5u-bFFoUt34-VGe4C6n7nNJFJcnTtg"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
 
-    /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #f2f2f2;
       padding: 25px;
@@ -33,13 +31,14 @@
       });
     });
 
-    function myMap() {
-      var myCenter = new google.maps.LatLng(-36.8242125,174.4842177);
-      var mapProp = {center:myCenter, zoom:14, scrollwheel:true, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
-      var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-      var marker = new google.maps.Marker({position:myCenter});
-      marker.setMap(map);
-    }
+        function myMap(long, lat, mapID, zoom) {
+          var myCenter = new google.maps.LatLng(long, lat);
+          var mapProp = {center:myCenter, zoom:zoom, scrollwheel:true, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+          var map = new google.maps.Map(document.getElementById(mapID),mapProp);
+          var marker = new google.maps.Marker({position:myCenter, title:'My Map'});
+          marker.setMap(map);
+          
+        }
   </script>
 </head>
 <body class="wall-img">

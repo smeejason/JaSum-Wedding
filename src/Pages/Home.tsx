@@ -21,14 +21,14 @@ class Home extends React.Component {
         </div>
         <div className="container bg-3 text-left">  
           <div className="row">
-            <FramedPicture title="Our engagement photo!" description="On this magical day Summer the amazing girl Brines said yes to a very loved up Jason Visser, I popped the question in Wales on a weekend camping trip." imageUrl={require("../images/random/engage.jpg")} className="col-sm-12"/>
+            <FramedPicture title="Our engagement photo!" mapLongitude={52.020906} mapLatitude={-4.843428} description="On this magical day Summer the amazing girl Brines said yes to a very loved up Jason Visser, I popped the question in Wales on a weekend camping trip." imageUrl={require("../images/random/engage.jpg")} className="col-sm-12"/>
           </div>
         </div>
         <br /><br />
         <div className="container bg-3 text-left">  
           <div className="row bg-box">
             <h3><u>Important Information?</u></h3>
-            <p>Date - 2nd February 2019</p>
+            <p>Date - 2nd February 2019 Time - 12:00 till Late</p>
             <h3><u>Where's it at yo?</u></h3>
             <p>361 Muriwai Valley Road, Muriwai, Auckland, New Zealand</p>
             <h3><u>What is happening</u></h3>
@@ -37,14 +37,16 @@ class Home extends React.Component {
             <p>All we want is your company, love, good vibes and photos, so please amateur and professional photographers alike take photos and share them. if you really feel like you need to do something then please donate to an animal charity of your choice.</p>
             <h3><u>What is the dress code</u></h3>
             <p>The theme is festival and fabulous, so this interpretation is open to you, just know this: The more ridiculous you feel at the beginning the more amazing you will feel as the night goes on, so bring out that crazy.</p> 
+            <h3><u>Are kids welcome?</u></h3>
+            <p>Im bringing Anthony and James, so i guess kids are welcome!</p>
           </div>  
         </div>
         <div className="container bg-3 text-left">  
           <div className="row">
-            <FramedPicture title="My 40th birthday festival" description="The girl and I love a festival, this photo was one of the days on the extremely deboucherous Shindig Festival." imageUrl={require("../images/random/fest1.jpg")} />
-            <FramedPicture imageUrl={require("../images/random/fest2.jpg")} landscape={false} />
-            <FramedPicture imageUrl={require("../images/random/fest3.jpg")} />
-            <FramedPicture imageUrl={require("../images/random/fest4.jpg")} />
+            <FramedPicture title="My 40th birthday festival" description="The girl and I love a festival, this photo was one of the days on the extremely debaucherous Shindig Festival." imageUrl={require("../images/random/fest1.jpg")} mapLongitude={51.1275547} mapLatitude={-2.4375868} />
+            <FramedPicture title="Live expressions festival" description="A weekend festival with friends, it was very small and pretty awesome with one of the best face painters i have ever seen." imageUrl={require("../images/random/fest2.jpg")} landscape={false} mapLongitude={51.1275547} mapLatitude={-2.4375868} />
+            <FramedPicture title="More 40th birthday festival" description="Lucky to be surrounded by such awesomeness." imageUrl={require("../images/random/fest3.jpg")} mapLongitude={51.1275547} mapLatitude={-2.4375868} />
+            <FramedPicture title="Moving Jay to his new forever home" description="Jay and Angela move in together, Summer and I went through his things!" imageUrl={require("../images/random/fest4.jpg")} mapLongitude={51.558731} mapLatitude={-0.0920028} />
           </div>
         </div>
         <br /><br />

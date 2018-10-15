@@ -192,7 +192,8 @@ body {
     100% { transform: rotate(360deg); }
   }
 
-  #googleMap { height: 500px !important;}
+  .location-map { height: 500px !important;}
+  .modal-map {height: 200px !important;}
 
   .cus-modal {
     display: block; /* Hidden by default */
