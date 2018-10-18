@@ -202,70 +202,97 @@ export default class Constants {
     },
     {
       "AdditionalCSS": "",
-      "Description": "One of our weekly pics",
+      "Description": "My girls birthday at Bucci, lovely restaurant where the birthday song is intense! Lots of trumpeting and light off. Not for the faint hearted.",
       "Landscape": false,
+      "Latitude": "-0.1547741",
+      "Longitude": "51.4411223",
+      "MapTitle": "Bucci's in Balham",
       "Src": require('./images/Selfees/22.jpg'),
-      "Title": "Image from our selfee gallery"
+      "Title": "Summers birthday dinner at Bucci's"
     },
     {
       "AdditionalCSS": "",
-      "Description": "One of our weekly pics",
+      "Description": "Zane and Ash's little one, Felix's first birthday party.",
       "Landscape": false,
+      "Latitude": "-0.1932656",
+      "Longitude": "51.4463111",
+      "MapTitle": "Flipout in Wandsworth",
       "Src": require('./images/Selfees/23.jpg'),
-      "Title": "Image from our selfee gallery"
+      "Title": "Flipout in Wandsworth"
     },
     {
       "AdditionalCSS": "",
-      "Description": "One of our weekly pics",
+      "Description": "First Saturday of spring in shorts and jandals!!!!",
       "Landscape": false,
+      "Latitude": "-0.2085864",
+      "Longitude": "51.4463399",
+      "MapTitle": "Summer day chilling in Tooting Common.",
       "Src": require('./images/Selfees/24.jpg'),
-      "Title": "Image from our selfee gallery"
-    }]
+      "Title": "Summer day chilling in Tooting Common."
+    }] 
   }, 
     {
       "Pictures": [{
       "AdditionalCSS": "",
-      "Description": "One of our weekly pics",
+      "Description": "Anniversary dinner in the tower behind us, actually in the clock tower in St Pancras.",
       "Landscape": false,
+      "Latitude": "-0.1266011",
+      "Longitude": "51.5316509",
+      "MapTitle": "Anniversary dinner in the clock tower",
       "Src": require('./images/Selfees/25.jpg'),
-      "Title": "Image from our selfee gallery"
+      "Title": "Anniversary dinner in the clock tower"
     },
     {
       "AdditionalCSS": "",
-      "Description": "One of our weekly pics",
+      "Description": "Warwick castle with Summer Brines mates.",
       "Landscape": false,
+      "Latitude": "-1.5874167",
+      "Longitude": "52.279668",
+      "MapTitle": "Warwick castle",
       "Src": require('./images/Selfees/26.jpg'),
-      "Title": "Image from our selfee gallery"
+      "Title": "Warwick castle"
     },
     {
       "AdditionalCSS": "",
-      "Description": "One of our weekly pics",
+      "Description": "Dinner in our local, pizza place, hipster bar. Was a real old man pub a couple months before.",
       "Landscape": false,
+      "Latitude": "-0.1565431",
+      "Longitude": "51.4329617",
+      "MapTitle": "Rose and Crown in Tooting",
       "Src": require('./images/Selfees/27.jpg'),
-      "Title": "Image from our selfee gallery"
+      "Title": "Rose and Crown in Tooting"
     },
     {
       "AdditionalCSS": "",
-      "Description": "One of our weekly pics",
+      "Description": "On route to james house party, onesies, PlayStation VR and a crazy crew.",
       "Landscape": false,
+      "Latitude": "-0.1565431",
+      "Longitude": "51.4329617",
+      "MapTitle": "Tesco London",
       "Src": require('./images/Selfees/28.jpg'),
-      "Title": "Image from our selfee gallery"
+      "Title": "Tesco London"
     }]
   },
     {
       "Pictures": [{
       "AdditionalCSS": "",
-      "Description": "One of our weekly pics",
+      "Description": "Hiking in Newport bay, Pembrokeshire, Wales. Beautiful countryside and beautiful lady :D",
       "Landscape": true,
+      "Latitude": "-4.8490287",
+      "Longitude": "52.0160629",
+      "MapTitle": "Newport, Pembrokeshire",
       "Src": require('./images/Selfees/29.jpg'),
-      "Title": "Image from our selfee gallery"
+      "Title": "Newport, Pembrokeshire."
     },
     {
       "AdditionalCSS": "",
-      "Description": "One of our weekly pics",
+      "Description": "his is the engagement selfie!!! Wales, Pembrokeshire, Newport Bay.",
       "Landscape": false,
+      "Latitude": "-4.8490287",
+      "Longitude": "52.0160629",
+      "MapTitle": "Newport, Pembrokeshire",
       "Src": require('./images/Selfees/30.jpg'),
-      "Title": "Image from our selfee gallery"
+      "Title": "Engagement Selfie, Newport, Pembrokeshire"
     },
     {
       "AdditionalCSS": "",
