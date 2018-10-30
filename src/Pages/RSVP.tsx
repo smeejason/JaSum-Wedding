@@ -36,7 +36,7 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
             plusOneName: '',
         };
    }
-    
+
     public onPlusOne = ()=> {
         this.setState({
             plusOne: !this.state.plusOne,
@@ -85,8 +85,7 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
           })
           .catch((error)=> {
             alert(error);
-          });
-   
+          });   
     }
   
     public render() {
@@ -123,7 +122,7 @@ export default class RSVP extends React.Component<IRSVPProps, IRSVPState> {
                     <div className="form-group"> 
                         <div className="col-sm-offset-2 col-sm-10">
                             <div className="checkbox">
-                                <label><input type="checkbox" name="cantMakeIt" onClick={this.cantMakeIt} /> Cant make it anymore...</label>
+                                <label><input type="checkbox" name="cantMakeIt" onClick={this.cantMakeIt} /> Cant make it. :(</label>
                             </div>
                         </div>
                     </div>

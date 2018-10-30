@@ -4,7 +4,7 @@ import '../App.css';
 class ImageUpload extends React.Component {
   public readUploadedFileAsText2 = (inputFile:File) => {
     const reader = new FileReader();
-    reader.readAsText(inputFile);
+    reader.readAsBinaryString(inputFile);
     reader.onload = (e:any) => {
 			alert(e.srcElement.result);
 		}
