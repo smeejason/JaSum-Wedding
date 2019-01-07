@@ -12,7 +12,8 @@ export interface IRegisteredProps {
 }
 
 class Registered extends React.Component<IRegisteredProps, IRegisteredState> {
-  public constructor(props:IRegisteredProps) {
+  
+    public constructor(props:IRegisteredProps) {
     super(props);
     this.state = {
         formLoading: true,
@@ -37,6 +38,7 @@ public LoadRegisteredPeople = ()=> {
 }
     
   public render() {
+      let peopleCount: number =0;
     return (
       <React.Fragment>
         <div className="container bg-3 text-left">
@@ -49,10 +51,10 @@ public LoadRegisteredPeople = ()=> {
                 <p>The following people are currently confirmed and coming.</p>
                 {!this.state.formLoading &&
                     this.state.responseData.map((personItem:any) =>
-                        <React.Fragment key={personItem.FirstName}>
+                        <React.Fragment key={personItem.FirstName && peopleCount ++}>
                             <li>{personItem.FirstName} {personItem.LastName}</li>
                             {
-                                personItem.PlusOne &&
+                                personItem.PlusOne && peopleCount ++ &&
                                 <li>{personItem.PlusOneName}</li>
                             }
                         </React.Fragment>
@@ -66,6 +68,8 @@ public LoadRegisteredPeople = ()=> {
                         </div>
                     </React.Fragment>
                 }
+                <br />
+                <p>People Currently Registered: {peopleCount}</p>
             </div>
         </div><br />
        <br /><br />

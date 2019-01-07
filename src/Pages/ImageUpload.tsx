@@ -1,12 +1,25 @@
+import axios from 'axios';
 import * as React from 'react';
 import '../App.css';
 
 class ImageUpload extends React.Component {
   public readUploadedFileAsText2 = (inputFile:File) => {
     const reader = new FileReader();
-    reader.readAsBinaryString(inputFile);
+    reader.readAsDataURL(inputFile);
     reader.onload = (e:any) => {
-			alert(e.srcElement.result);
+      alert(e.srcElement.result);
+      
+      axios.post('http://localhost:7071/api/UploadImage', 
+            { 
+                fileContent: e.srcElement.result,
+                fileName: "test.file",
+            })
+          .then((response)=> {
+            alert("Success!!" + response.data)
+          })
+          .catch((error)=> {
+            alert(error);
+          });   
 		}
   }
 
